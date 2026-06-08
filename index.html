@@ -1,0 +1,431 @@
+```html
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Roja - Seleção Espanhola</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat;
+        }
+        
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: #c8102e;
+            transform: translateY(-2px);
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 60%;
+            height: 4px;
+            background: #c8102e;
+            bottom: -8px;
+            left: 20%;
+        }
+        
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .player-card {
+            transition: all 0.3s ease;
+        }
+        
+        .player-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        
+        .flag-stripes {
+            background: repeating-linear-gradient(
+                45deg,
+                #c8102e,
+                #c8102e 10px,
+                #ffd700 10px,
+                #ffd700 20px
+            );
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white">
+    <!-- Navbar -->
+    <nav class="bg-black border-b border-red-800 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-3xl">🇪🇸</div>
+                <div>
+                    <span class="text-2xl font-bold tracking-tight">LA ROJA</span>
+                </div>
+            </div>
+            
+            <div class="flex gap-8 text-sm uppercase tracking-widest">
+                <a href="#historia" class="nav-link">História</a>
+                <a href="#jogos" class="nav-link">Próximos Jogos</a>
+                <a href="#elenco" class="nav-link">Elenco 2026</a>
+            </div>
+            
+            <div class="flex items-center gap-2 text-xs bg-zinc-900 px-4 py-2 rounded-full border border-red-800">
+                <i class="fa-solid fa-futbol"></i>
+                <span>Copa do Mundo 2026</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero-bg h-screen flex items-center relative">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-2 bg-black/70 px-6 py-2 rounded-full mb-6 border border-red-500">
+                <span class="text-red-400">🇪🇸</span>
+                <span class="uppercase tracking-widest text-sm">Seleção Espanhola de Futebol</span>
+            </div>
+            <h1 class="text-7xl md:text-8xl font-bold mb-4 tracking-tighter">LA FURIA ROJA</h1>
+            <p class="text-2xl max-w-2xl mx-auto text-zinc-300 mb-10">Campeã da Euro 2024 • Orgulho da Espanha</p>
+            
+            <div class="flex gap-4 justify-center">
+                <a href="#historia" class="bg-red-600 hover:bg-red-700 px-8 py-4 rounded-xl font-semibold text-lg transition-colors flex items-center gap-2">
+                    <i class="fa-solid fa-book"></i>
+                    Conheça nossa história
+                </a>
+                <a href="#elenco" class="border border-white hover:bg-white hover:text-black px-8 py-4 rounded-xl font-semibold text-lg transition-colors">
+                    Ver o Elenco
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+            <div class="text-xs tracking-widest mb-2">ROLE PARA BAIXO</div>
+            <i class="fa-solid fa-chevron-down animate-bounce text-2xl"></i>
+        </div>
+    </header>
+
+    <!-- História -->
+    <section id="historia" class="py-24 bg-zinc-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-4 section-title">Nossa História</h2>
+            <p class="text-center text-zinc-400 max-w-2xl mx-auto mb-16">De 1920 até os dias de hoje, a La Roja construiu um legado de paixão e excelência.</p>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <div class="bg-zinc-800 rounded-3xl p-8 mb-8">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 bg-yellow-400 rounded-2xl flex items-center justify-center text-4xl">🏆</div>
+                            <div>
+                                <div class="text-red-400 text-sm font-mono">1920</div>
+                                <h3 class="text-2xl font-semibold">Início da Jornada</h3>
+                            </div>
+                        </div>
+                        <p class="text-zinc-400">A seleção espanhola estreou nas Olimpíadas de Antuérpia em 1920, conquistando a prata e ganhando o apelido "Fúria Roja" por seu estilo aguerrido.</p>
+                    </div>
+                    
+                    <div class="bg-zinc-800 rounded-3xl p-8">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center text-4xl">⭐</div>
+                            <div>
+                                <div class="text-red-400 text-sm font-mono">2008 - 2012</div>
+                                <h3 class="text-2xl font-semibold">A Era Dourada</h3>
+                            </div>
+                        </div>
+                        <p class="text-zinc-400">Sob o comando de Luis Aragonés e Vicente del Bosque, a Espanha conquistou a Euro 2008, a Copa do Mundo 2010 e a Euro 2012. O "tiki-taka" revolucionou o futebol mundial.</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="h-full bg-zinc-800 rounded-3xl p-10 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-3xl font-semibold mb-6">Títulos Principais</h3>
+                            <ul class="space-y-6">
+                                <li class="flex gap-6">
+                                    <span class="font-mono text-4xl font-bold text-red-500">1</span>
+                                    <div>
+                                        <div class="font-semibold">Copa do Mundo FIFA</div>
+                                        <div class="text-zinc-400 text-sm">2010 - África do Sul</div>
+                                    </div>
+                                </li>
+                                <li class="flex gap-6">
+                                    <span class="font-mono text-4xl font-bold text-red-500">4</span>
+                                    <div>
+                                        <div class="font-semibold">Eurocopas</div>
+                                        <div class="text-zinc-400 text-sm">1964, 2008, 2012, 2024</div>
+                                    </div>
+                                </li>
+                                <li class="flex gap-6">
+                                    <span class="font-mono text-4xl font-bold text-red-500">1</span>
+                                    <div>
+                                        <div class="font-semibold">Ouro Olímpico</div>
+                                        <div class="text-zinc-400 text-sm">1992 - Barcelona</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mt-12 pt-8 border-t border-zinc-700">
+                            <p class="italic text-zinc-400">"Quando a Espanha joga bem, o futebol se torna arte." — Andrés Iniesta</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Próximos Jogos -->
+    <section id="jogos" class="py-24 bg-black">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-4 section-title">Próximos Jogos</h2>
+            <p class="text-center text-zinc-400 mb-16">Copa do Mundo FIFA 2026 • Grupo H</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Jogo 1 -->
+                <div class="bg-zinc-900 rounded-3xl overflow-hidden border border-red-900">
+                    <div class="bg-red-600 py-3 text-center font-semibold">15 de Junho 2026</div>
+                    <div class="p-8 text-center">
+                        <div class="flex justify-between items-center">
+                            <div class="flex flex-col items-center">
+                                <div class="text-5xl mb-2">🇪🇸</div>
+                                <div class="font-bold">Espanha</div>
+                            </div>
+                            <div class="text-4xl font-mono text-zinc-500">vs</div>
+                            <div class="flex flex-col items-center">
+                                <div class="text-5xl mb-2">🇨🇻</div>
+                                <div class="font-bold">Cabo Verde</div>
+                            </div>
+                        </div>
+                        <div class="mt-8 text-sm text-zinc-400">Atlanta Stadium • 16:00 (horário local)</div>
+                    </div>
+                </div>
+                
+                <!-- Jogo 2 -->
+                <div class="bg-zinc-900 rounded-3xl overflow-hidden border border-red-900">
+                    <div class="bg-red-600 py-3 text-center font-semibold">21 de Junho 2026</div>
+                    <div class="p-8 text-center">
+                        <div class="flex justify-between items-center">
+                            <div class="flex flex-col items-center">
+                                <div class="text-5xl mb-2">🇪🇸</div>
+                                <div class="font-bold">Espanha</div>
+                            </div>
+                            <div class="text-4xl font-mono text-zinc-500">vs</div>
+                            <div class="flex flex-col items-center">
+                                <div class="text-5xl mb-2">🇸🇦</div>
+                                <div class="font-bold">Arábia Saudita</div>
+                            </div>
+                        </div>
+                        <div class="mt-8 text-sm text-zinc-400">Atlanta Stadium • 16:00 (horário local)</div>
+                    </div>
+                </div>
+                
+                <!-- Jogo 3 -->
+                <div class="bg-zinc-900 rounded-3xl overflow-hidden border border-red-900">
+                    <div class="bg-red-600 py-3 text-center font-semibold">26 de Junho 2026</div>
+                    <div class="p-8 text-center">
+                        <div class="flex justify-between items-center">
+                            <div class="flex flex-col items-center">
+                                <div class="text-5xl mb-2">🇺🇾</div>
+                                <div class="font-bold">Uruguai</div>
+                            </div>
+                            <div class="text-4xl font-mono text-zinc-500">vs</div>
+                            <div class="flex flex-col items-center">
+                                <div class="text-5xl mb-2">🇪🇸</div>
+                                <div class="font-bold">Espanha</div>
+                            </div>
+                        </div>
+                        <div class="mt-8 text-sm text-zinc-400">Guadalajara Stadium • 17:00 (horário local)</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 text-sm text-zinc-500">
+                La Roja busca o bicampeonato mundial em 2026!
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrossel Elenco -->
+    <section id="elenco" class="py-24 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-4 section-title">Elenco Convocado - Copa 2026</h2>
+            <p class="text-center text-zinc-400 mb-12">Seleção de Luis de la Fuente • 26 jogadores</p>
+            
+            <div class="carousel-container">
+                <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-red-600 w-12 h-12 rounded-full flex items-center justify-center z-10 transition-colors">
+                    <i class="fa-solid fa-chevron-left text-xl"></i>
+                </button>
+                
+                <div id="carousel" class="carousel-track gap-8">
+                    <!-- Cards serão inseridos via JS -->
+                </div>
+                
+                <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-red-600 w-12 h-12 rounded-full flex items-center justify-center z-10 transition-colors">
+                    <i class="fa-solid fa-chevron-right text-xl"></i>
+                </button>
+            </div>
+            
+            <div class="flex justify-center gap-3 mt-8">
+                <button onclick="goToSlide(0)" class="w-3 h-3 bg-red-600 rounded-full carousel-dot"></button>
+                <button onclick="goToSlide(1)" class="w-3 h-3 bg-zinc-600 hover:bg-zinc-400 rounded-full carousel-dot"></button>
+                <button onclick="goToSlide(2)" class="w-3 h-3 bg-zinc-600 hover:bg-zinc-400 rounded-full carousel-dot"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-red-900">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <div class="flex justify-center gap-8 text-4xl mb-8">
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+            <p class="text-zinc-500">Site demonstrativo • Feito com ❤️ para a La Roja</p>
+            <p class="text-xs text-zinc-600 mt-4">Dados aproximados de maio/junho 2026</p>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script já carregado via CDN
+        
+        const players = [
+            {
+                name: "Lamine Yamal",
+                position: "Atacante",
+                club: "Barcelona",
+                img: "https://picsum.photos/id/64/300/300",
+                number: "19"
+            },
+            {
+                name: "Rodri",
+                position: "Meio-campo",
+                club: "Manchester City",
+                img: "https://picsum.photos/id/201/300/300",
+                number: "16"
+            },
+            {
+                name: "Pedri",
+                position: "Meio-campo",
+                club: "Barcelona",
+                img: "https://picsum.photos/id/201/300/300",
+                number: "8"
+            },
+            {
+                name: "Nico Williams",
+                position: "Atacante",
+                club: "Athletic Bilbao",
+                img: "https://picsum.photos/id/201/300/300",
+                number: "22"
+            },
+            {
+                name: "Unai Simón",
+                position: "Goleiro",
+                club: "Athletic Bilbao",
+                img: "https://picsum.photos/id/201/300/300",
+                number: "23"
+            },
+            {
+                name: "Pau Cubarsí",
+                position: "Zagueiro",
+                club: "Barcelona",
+                img: "https://picsum.photos/id/201/300/300",
+                number: "5"
+            }
+        ];
+        
+        let currentSlide = 0;
+        const cardsPerView = 4;
+        
+        function createPlayerCard(player) {
+            return `
+                <div class="player-card min-w-[260px] bg-zinc-800 rounded-3xl overflow-hidden border border-zinc-700">
+                    <div class="h-64 relative">
+                        <img src="${player.img}" alt="${player.name}" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-black/70 text-white text-4xl font-bold w-12 h-12 flex items-center justify-center rounded-2xl border border-red-500">${player.number}</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-red-400 text-sm font-mono">${player.position}</div>
+                        <div class="text-2xl font-semibold mt-1">${player.name}</div>
+                        <div class="text-zinc-400 text-sm">${player.club}</div>
+                    </div>
+                </div>
+            `;
+        }
+        
+        function renderCarousel() {
+            const carousel = document.getElementById('carousel');
+            carousel.innerHTML = '';
+            
+            // Duplicar para loop infinito
+            const allPlayers = [...players, ...players];
+            
+            allPlayers.forEach(player => {
+                carousel.innerHTML += createPlayerCard(player);
+            });
+        }
+        
+        function updateCarouselPosition() {
+            const carousel = document.getElementById('carousel');
+            const offset = currentSlide * (260 + 32); // card width + gap
+            carousel.style.transform = `translateX(-${offset}px)`;
+        }
+        
+        function nextSlide() {
+            currentSlide++;
+            if (currentSlide > players.length) {
+                currentSlide = 0;
+            }
+            updateCarouselPosition();
+        }
+        
+        function prevSlide() {
+            currentSlide--;
+            if (currentSlide < 0) {
+                currentSlide = players.length - 1;
+            }
+            updateCarouselPosition();
+        }
+        
+        function goToSlide(index) {
+            currentSlide = index;
+            updateCarouselPosition();
+        }
+        
+        // Inicialização
+        window.onload = function() {
+            renderCarousel();
+            
+            // Auto slide a cada 4 segundos
+            setInterval(() => {
+                nextSlide();
+            }, 4000);
+            
+            // Teclas de navegação
+            document.addEventListener('keydown', function(e) {
+                if (e.key === "ArrowRight") nextSlide();
+                if (e.key === "ArrowLeft") prevSlide();
+            });
+        }
+    </script>
+</body>
+</html>
+```
